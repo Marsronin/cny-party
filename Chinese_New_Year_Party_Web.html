@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinese New Year Party 2026</title>
+  <meta name="description" content="Chinese New Year Party 2026 · 中西融合 Finger Food Night" />
+  <style>
+    :root{
+      --bg: #0b0b0e;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.12);
+      --red: #b3001b;
+      --gold: #d4af37;
+      --gold2:#f2d27c;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 22px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display","SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 15% -10%, rgba(179,0,27,.55), transparent 55%),
+        radial-gradient(900px 520px at 85% 0%, rgba(212,175,55,.25), transparent 50%),
+        radial-gradient(700px 520px at 50% 110%, rgba(179,0,27,.25), transparent 55%),
+        linear-gradient(180deg, #050509 0%, var(--bg) 60%, #040406 100%);
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 16px 48px;
+    }
+    .hero{
+      position: relative;
+      border-radius: calc(var(--radius) + 6px);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(1200px 600px at 15% 30%, rgba(179,0,27,.85), rgba(179,0,27,.15) 55%, transparent 70%),
+        radial-gradient(900px 520px at 92% 28%, rgba(212,175,55,.45), transparent 55%),
+        linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
+      padding: 28px 22px 22px;
+    }
+    .topline{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing:.2px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(6px);
+    }
+    .badge b{color:var(--gold2)}
+    h1{
+      margin: 14px 0 6px;
+      font-size: clamp(30px, 4.5vw, 48px);
+      line-height: 1.05;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+      max-width: 60ch;
+    }
+    .divider{
+      margin: 18px 0 10px;
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(242,210,124,.75), rgba(255,255,255,.15), transparent);
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 18px;
+      align-items: end;
+    }
+    .heroRight{
+      display:flex;
+      justify-content:flex-end;
+    }
+    .horse{
+      width:min(280px, 46vw);
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.14);
+      display:grid;
+      place-items:center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+    .horse svg{width:88%; height:auto; opacity:.95}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .card{
+      grid-column: span 6;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .card.big{grid-column: span 12;}
+    .card h2{
+      margin: 0 0 10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size: 16px;
+      letter-spacing:.2px;
+    }
+    .tag{
+      margin-left:auto;
+      font-family:var(--mono);
+      font-size: 12px;
+      color: rgba(242,210,124,.92);
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(242,210,124,.35);
+      background: rgba(212,175,55,.08);
+    }
+    ul{
+      margin:0;
+      padding-left: 18px;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    li{margin: 6px 0}
+    .note{
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px dashed rgba(242,210,124,.45);
+      background: rgba(179,0,27,.12);
+      color: rgba(255,255,255,.86);
+    }
+    .note b{color: var(--gold2)}
+    .footer{
+      margin-top: 20px;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .qrbox{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 10px 12px;
+    }
+    .qrhint{
+      color: rgba(255,255,255,.72);
+      font-size: 12px;
+      max-width: 42ch;
+    }
+    code{
+      font-family:var(--mono);
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    /* responsive */
+    @media (max-width: 760px){
+      .heroGrid{grid-template-columns: 1fr; gap: 14px;}
+      .heroRight{justify-content:flex-start;}
+      .card{grid-column: span 12;}
+      .horse{width: min(220px, 70vw);}
+    }
+    @media print{
+      body{background:#fff;color:#000}
+      .hero,.card,.note,.qrbox{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="topline">
+        <span class="badge">🧧 <b>Chinese New Year</b> · 2026 · 🐎 Year of the Horse</span>
+        <span class="badge">👨‍👩‍👧‍👦 8 Adults · 5 Kids</span>
+        <span class="badge">🍢 Stand & Share</span>
+      </div>
+
+      <div class="heroGrid">
+        <div>
+          <h1>Chinese New Year Party 2026</h1>
+          <p class="sub"><b>中西融合 · Finger Food Night</b><br/>
+            Relaxed, shareable bites — Chinese & Western favorites, served in waves.
+          </p>
+          <div class="divider"></div>
+          <p class="sub" style="margin:10px 0 0;">🎉 Enjoy & Happy Chinese New Year! · <span style="color:var(--gold2);font-weight:600;">马到成功</span></p>
+        </div>
+
+        <div class="heroRight">
+          <div class="horse" aria-label="Horse motif">
+            <!-- Minimal line-art horse (inline SVG) -->
+            <svg viewBox="0 0 300 300" role="img" aria-label="Minimal horse illustration">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#f2d27c" stop-opacity="0.95"/>
+                  <stop offset="0.55" stop-color="#d4af37" stop-opacity="0.55"/>
+                  <stop offset="1" stop-color="#ffffff" stop-opacity="0.20"/>
+                </linearGradient>
+              </defs>
+              <circle cx="150" cy="150" r="140" fill="rgba(255,255,255,0.03)" stroke="rgba(242,210,124,0.35)" stroke-width="2"/>
+              <path d="M77 194c26-60 63-96 111-105 19-4 44 2 58 14-12 2-24 9-32 17 12 9 20 21 23 37 5 26-6 53-30 70-24 18-52 18-78 7-10 12-23 23-40 33-12 7-23 10-36 10 7-9 14-18 24-29z"
+                    fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M154 93c-6-14-9-28-7-42 12 8 23 19 31 33M200 104c12-6 25-9 40-8-8 11-18 20-31 27"
+                    fill="none" stroke="rgba(242,210,124,0.55)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M133 165c16 7 32 8 49 3" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Menu sections">
+      <div class="card">
+        <h2>🥢 Cold Bites 冷食 <span class="tag">Start</span></h2>
+        <ul>
+          <li>🧀 Cheese Platter（奶酪拼盘 · 坚果 · 水果）</li>
+          <li>🍅 Caprese Skewers（番茄芝士串）</li>
+          <li>🥗 Asian Salad Cups（亚洲风凉拌）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🔥 Hot Highlights 热食精选 <span class="tag">Main</span></h2>
+        <ul>
+          <li>🥟 Mini Dumplings（迷你煎饺）</li>
+          <li>🍤 Tempura Shrimp（天妇罗虾）</li>
+          <li>🍗 Asian Fried Chicken（亚洲风炸鸡）</li>
+          <li>🥙 Chinese Beef Wraps（中式牛肉卷）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🍔 Western Bites 西式小食 <span class="tag">Kids</span></h2>
+        <ul>
+          <li>🍔 Mini Sliders（迷你汉堡）</li>
+          <li>🍕 Pizza Bites（小披萨）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🍜 Small Bowls 小碗主食 <span class="tag">Comfort</span></h2>
+        <ul>
+          <li>🍚 Fried Rice（扬州炒饭）</li>
+          <li>🍜 Stir-Fried Noodles（炒面）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🍡 Dessert 新年甜点 <span class="tag">Sweet</span></h2>
+        <ul>
+          <li>🍡 Tangyuan（汤圆）</li>
+          <li>🧁 Cupcakes（新年杯子蛋糕）</li>
+          <li>🍪 Fortune Cookies（幸运饼干）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🍷 Drinks 饮品 <span class="tag">Cheers</span></h2>
+        <ul>
+          <li>🍾 Sparkling Wine</li>
+          <li>🍷 Red Wine</li>
+          <li>🍺 Tsingtao Beer</li>
+          <li>🍵 Chinese Tea</li>
+          <li>🍹 New Year Special（Orange &amp; Sparkling）</li>
+        </ul>
+      </div>
+
+      <div class="card big">
+        <div class="note">
+          <b>Serving plan</b>：Cold bites first → Hot bites in waves → Small bowls → Dessert.<br/>
+          🧧🐎 <b>Wishing you energy, success &amp; joy!</b> 新春快乐 · 马到成功
+        </div>
+
+        <div class="footer">
+          <div>Tip: To share this page via WhatsApp, upload this file and share the link. (See instructions below)</div>
+          <div class="qrbox">
+            <div class="qrhint">
+              Want a QR code here?<br/>
+              Replace <code>YOUR_LINK_HERE</code> in your QR generator with your published page URL.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card big" style="margin-top:14px;">
+      <h2>✅ How to share (fast) <span class="tag">WhatsApp</span></h2>
+      <ul>
+        <li><b>Option A (easiest):</b> Drag & drop this HTML file to a simple host like Netlify Drop, then share the generated link.</li>
+        <li><b>Option B:</b> Put it in a folder named <code>index.html</code> on GitHub Pages.</li>
+        <li>After you have the link, generate a QR code using that URL (and I can embed it into the PDF too).</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
