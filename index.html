@@ -59,14 +59,14 @@
     /* Double border like a printed invitation */
     .invite::before{
       content:"";
-      position:absolute; inset: 14px;
+      position:absolute; inset: 6px;
       border-radius: calc(var(--radius) + 2px);
       border: 2px solid rgba(176,0,32,.48);
       pointer-events:none;
     }
     .invite::after{
       content:"";
-      position:absolute; inset: 22px;
+      position:absolute; inset: 12px;
       border-radius: calc(var(--radius));
       border: 1.5px solid rgba(212,175,55,.55);
       pointer-events:none;
