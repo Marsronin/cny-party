@@ -50,19 +50,14 @@
       box-shadow: var(--shadow);
       overflow: hidden;
       background:
-        radial-gradient(90px 52px at 10% 10%, rgba(176,0,32,.08), transparent 60%),
-        radial-gradient(72px 52px at 92% 18%, rgba(212,175,55,.12), transparent 58%),
+        radial-gradient(900px 520px at 10% 10%, rgba(176,0,32,.08), transparent 60%),
+        radial-gradient(720px 520px at 92% 18%, rgba(212,175,55,.12), transparent 58%),
         linear-gradient(180deg, var(--paper) 0%, #ffffff 45%, var(--paper) 100%);
       border: 1px solid rgba(17,24,39,.10);
     }
 
     /* Border like a printed invitation */
-    .invite::before{
-      content:"";
-      position:absolute; inset: 14px;
-      border-radius: calc(var(--radius) + 2px);
-      border: 2px solid rgba(176,0,32,.48);
-      pointer-events:none;
+    
     }
     .invite::after{
       content:"";
