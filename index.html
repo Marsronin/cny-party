@@ -5,253 +5,363 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chinese New Year Party 2026</title>
   <meta name="description" content="Chinese New Year Party 2026 · 中西融合 Finger Food Night" />
+  <meta name="theme-color" content="#B00020" />
   <style>
     :root{
-      --bg: #0b0b0e;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.72);
-      --line: rgba(255,255,255,.12);
-      --red: #b3001b;
-      --gold: #d4af37;
-      --gold2:#f2d27c;
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --radius: 22px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --text:#0f172a;         /* slate-900 */
+      --muted:#475569;        /* slate-600 */
+      --muted2:#64748b;       /* slate-500 */
+      --bg:#ffffff;
+      --red:#B00020;
+      --red2:#D1002D;
+      --gold:#D4AF37;
+      --gold2:#F2D27C;
+      --line:rgba(15, 23, 42, 0.10);
+      --line2:rgba(15, 23, 42, 0.06);
+      --radius:22px;
+      --shadow:0 18px 55px rgba(15,23,42,.10);
+      --shadow2:0 10px 28px rgba(15,23,42,.08);
       --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display","SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:var(--sans);
       color:var(--text);
       background:
-        radial-gradient(1000px 600px at 15% -10%, rgba(179,0,27,.55), transparent 55%),
-        radial-gradient(900px 520px at 85% 0%, rgba(212,175,55,.25), transparent 50%),
-        radial-gradient(700px 520px at 50% 110%, rgba(179,0,27,.25), transparent 55%),
-        linear-gradient(180deg, #050509 0%, var(--bg) 60%, #040406 100%);
+        radial-gradient(900px 560px at 14% 0%, rgba(209,0,45,.10), transparent 60%),
+        radial-gradient(820px 560px at 90% 4%, rgba(212,175,55,.20), transparent 55%),
+        radial-gradient(1000px 620px at 50% 120%, rgba(209,0,45,.08), transparent 55%),
+        linear-gradient(180deg, #ffffff 0%, #fff7f8 55%, #ffffff 100%);
       min-height:100vh;
     }
     a{color:inherit}
     .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 22px 16px 48px;
+      max-width:760px;
+      margin:0 auto;
+      padding:18px 14px 52px;
     }
-    .hero{
-      position: relative;
-      border-radius: calc(var(--radius) + 6px);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(1200px 600px at 15% 30%, rgba(179,0,27,.85), rgba(179,0,27,.15) 55%, transparent 70%),
-        radial-gradient(900px 520px at 92% 28%, rgba(212,175,55,.45), transparent 55%),
-        linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
-      padding: 28px 22px 22px;
+
+    /* COVER */
+    .cover{
+      position:relative;
+      border-radius:calc(var(--radius) + 4px);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid var(--line);
+      background:#fff;
     }
-    .topline{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing:.2px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.16);
-      backdrop-filter: blur(6px);
-    }
-    .badge b{color:var(--gold2)}
-    h1{
-      margin: 14px 0 6px;
-      font-size: clamp(30px, 4.5vw, 48px);
-      line-height: 1.05;
-      letter-spacing:-.6px;
-    }
-    .sub{
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.45;
-      max-width: 60ch;
-    }
-    .divider{
-      margin: 18px 0 10px;
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba(242,210,124,.75), rgba(255,255,255,.15), transparent);
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.4fr .6fr;
-      gap: 18px;
-      align-items: end;
-    }
-    .heroRight{
-      display:flex;
-      justify-content:flex-end;
-    }
-    .horse{
-      width:min(280px, 46vw);
-      aspect-ratio: 1 / 1;
-      border-radius: 999px;
-      background: rgba(0,0,0,.18);
-      border: 1px solid rgba(255,255,255,.14);
-      display:grid;
-      place-items:center;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    .coverMedia{
+      position:relative;
+      height: clamp(280px, 42vw, 420px);
       overflow:hidden;
     }
-    .horse svg{width:88%; height:auto; opacity:.95}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-      margin-top: 16px;
+    .coverMedia::before{
+      content:"";
+      position:absolute; inset:-20px;
+      background-image:url("https://images.unsplash.com/photo-1589803196808-b395a6f32a9a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3600");
+      background-size:cover;
+      background-position:center;
+      transform: translate3d(0, var(--parallax, 0px), 0) scale(1.06);
+      filter:saturate(1.05) contrast(1.02);
+      will-change: transform;
     }
+    /* soft vignette + red/gold overlay */
+    .coverMedia::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 520px at 12% 18%, rgba(176,0,32,.62), rgba(176,0,32,.18) 55%, transparent 70%),
+        radial-gradient(900px 520px at 92% 20%, rgba(212,175,55,.46), transparent 62%),
+        linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.35));
+      mix-blend-mode: multiply;
+    }
+
+    .coverInner{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding: 22px 20px 18px;
+      color:#fff;
+    }
+    .titleRow{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0;
+      font-size: clamp(26px, 5.6vw, 44px);
+      letter-spacing:-.6px;
+      line-height:1.06;
+      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .subtitle{
+      margin-top:8px;
+      font-size:15px;
+      opacity:.95;
+      line-height:1.45;
+      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+      font-size:13px;
+    }
+    .badge{
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.22);
+      padding: 6px 11px;
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 22px rgba(0,0,0,.18);
+    }
+    .badge b{ color: var(--gold2); font-weight: 700; }
+    .horseMark{
+      width: 150px;
+      height: 150px;
+      border-radius:999px;
+      background: rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
+      display:grid;
+      place-items:center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 16px 36px rgba(0,0,0,.22);
+      overflow:hidden;
+      flex: 0 0 auto;
+    }
+    .horseMark svg{ width: 88%; height:auto; opacity:.95; }
+    .scrollHint{
+      position:absolute;
+      left:50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size: 12px;
+      color: rgba(255,255,255,.88);
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(8px);
+    }
+    .chev{
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid rgba(242,210,124,.95);
+      border-bottom: 2px solid rgba(242,210,124,.95);
+      transform: rotate(45deg);
+      margin-top: -2px;
+      animation: bob 1.4s ease-in-out infinite;
+    }
+    @keyframes bob {
+      0%,100% { transform: rotate(45deg) translate(0,0); opacity:.85; }
+      50% { transform: rotate(45deg) translate(0,3px); opacity:1; }
+    }
+
+    /* TOP ACTIONS */
+    .actions{
+      margin: 14px 0 10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .actionsLeft{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      appearance:none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.85);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      cursor:pointer;
+      box-shadow: var(--shadow2);
+    }
+    .btn.primary{
+      border-color: rgba(176,0,32,.22);
+      background: linear-gradient(135deg, rgba(176,0,32,.10), rgba(212,175,55,.12));
+    }
+    .btn:active{ transform: translateY(1px); }
+    .tinyUrl{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 14px;
+      border: 1px dashed rgba(176,0,32,.22);
+      background: rgba(176,0,32,.04);
+    }
+
+    /* SINGLE COLUMN STACK */
+    .stack{ display:flex; flex-direction:column; gap: 12px; }
     .card{
-      grid-column: span 6;
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border: 1px solid rgba(255,255,255,.12);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius: var(--radius);
       padding: 16px 16px 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      box-shadow: 0 10px 26px rgba(15,23,42,.06);
     }
-    .card.big{grid-column: span 12;}
     .card h2{
-      margin: 0 0 10px;
+      margin:0 0 10px;
+      font-size: 16px;
       display:flex;
       align-items:center;
       gap:10px;
-      font-size: 16px;
       letter-spacing:.2px;
     }
     .tag{
       margin-left:auto;
-      font-family:var(--mono);
+      font-family: var(--mono);
       font-size: 12px;
-      color: rgba(242,210,124,.92);
-      padding: 4px 8px;
+      padding: 4px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(242,210,124,.35);
-      background: rgba(212,175,55,.08);
+      border: 1px solid rgba(212,175,55,.38);
+      background: rgba(212,175,55,.10);
+      color: rgba(120, 79, 0, .92);
+      white-space:nowrap;
+    }
+    .dividerRow{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(176,0,32,.18), rgba(212,175,55,.32), rgba(15,23,42,.08), transparent);
+      margin: 8px 0 12px;
     }
     ul{
       margin:0;
       padding-left: 18px;
-      color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 14px;
     }
-    li{margin: 6px 0}
+    li{ margin: 6px 0; }
     .note{
-      margin-top: 16px;
-      padding: 14px 16px;
-      border-radius: var(--radius);
-      border: 1px dashed rgba(242,210,124,.45);
-      background: rgba(179,0,27,.12);
-      color: rgba(255,255,255,.86);
+      border: 1px dashed rgba(176,0,32,.28);
+      background: rgba(176,0,32,.04);
     }
-    .note b{color: var(--gold2)}
+    .note b{ color: var(--red); }
     .footer{
-      margin-top: 20px;
-      color: rgba(255,255,255,.62);
-      font-size: 12px;
+      margin-top: 12px;
       display:flex;
       gap:10px;
-      align-items:center;
       justify-content:space-between;
       flex-wrap:wrap;
-    }
-    .qrbox{
-      display:flex;
-      gap:12px;
       align-items:center;
-      background: rgba(0,0,0,.22);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 16px;
-      padding: 10px 12px;
-    }
-    .qrhint{
-      color: rgba(255,255,255,.72);
       font-size: 12px;
-      max-width: 42ch;
+      color: var(--muted2);
     }
-    code{
-      font-family:var(--mono);
-      background: rgba(0,0,0,.25);
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      background: rgba(15,23,42,.92);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
       border: 1px solid rgba(255,255,255,.12);
-      padding: 2px 6px;
-      border-radius: 10px;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events:none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
     }
 
-    /* responsive */
-    @media (max-width: 760px){
-      .heroGrid{grid-template-columns: 1fr; gap: 14px;}
-      .heroRight{justify-content:flex-start;}
-      .card{grid-column: span 12;}
-      .horse{width: min(220px, 70vw);}
+    /* Responsive */
+    @media (max-width: 520px){
+      .horseMark{ width: 120px; height: 120px; }
+      .coverInner{ padding: 18px 16px 16px; }
+      .actions{ justify-content:flex-start; }
+      .tinyUrl{ width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .chev{animation:none}
     }
     @media print{
-      body{background:#fff;color:#000}
-      .hero,.card,.note,.qrbox{box-shadow:none}
+      .actions, .scrollHint, .toast{ display:none !important; }
+      body{ background:#fff; }
+      .cover{ box-shadow:none; }
+      .card{ box-shadow:none; }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <section class="hero">
-      <div class="topline">
-        <span class="badge">🧧 <b>Chinese New Year</b> · 2026 · 🐎 Year of the Horse</span>
-        <span class="badge">👨‍👩‍👧‍👦 8 Adults · 5 Kids</span>
-        <span class="badge">🍢 Stand & Share</span>
-      </div>
 
-      <div class="heroGrid">
-        <div>
-          <h1>Chinese New Year Party 2026</h1>
-          <p class="sub"><b>中西融合 · Finger Food Night</b><br/>
-            Relaxed, shareable bites — Chinese & Western favorites, served in waves.
-          </p>
-          <div class="divider"></div>
-          <p class="sub" style="margin:10px 0 0;">🎉 Enjoy & Happy Chinese New Year! · <span style="color:var(--gold2);font-weight:600;">马到成功</span></p>
-        </div>
+    <section class="cover" aria-label="Cover">
+      <div class="coverMedia" id="coverMedia"></div>
 
-        <div class="heroRight">
-          <div class="horse" aria-label="Horse motif">
-            <!-- Minimal line-art horse (inline SVG) -->
+      <div class="coverInner">
+        <div class="titleRow">
+          <div style="min-width: 240px; flex: 1 1 auto;">
+            <h1>Chinese New Year Party 2026 🧧🐎</h1>
+            <div class="subtitle"><b>中西融合 · Finger Food Night</b><br/>Relaxed, shareable bites — Chinese &amp; Western favorites.</div>
+            <div class="badges">
+              <div class="badge">👨‍👩‍👧‍👦 <b>8 Adults</b> · 5 Kids</div>
+              <div class="badge">🍢 Stand &amp; Share</div>
+              <div class="badge">✨ Year of the Horse</div>
+            </div>
+          </div>
+
+          <div class="horseMark" aria-label="Horse motif">
             <svg viewBox="0 0 300 300" role="img" aria-label="Minimal horse illustration">
               <defs>
                 <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                  <stop offset="0" stop-color="#f2d27c" stop-opacity="0.95"/>
-                  <stop offset="0.55" stop-color="#d4af37" stop-opacity="0.55"/>
-                  <stop offset="1" stop-color="#ffffff" stop-opacity="0.20"/>
+                  <stop offset="0" stop-color="#F2D27C" stop-opacity="0.95"/>
+                  <stop offset="0.55" stop-color="#D4AF37" stop-opacity="0.65"/>
+                  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.28"/>
                 </linearGradient>
               </defs>
-              <circle cx="150" cy="150" r="140" fill="rgba(255,255,255,0.03)" stroke="rgba(242,210,124,0.35)" stroke-width="2"/>
+              <circle cx="150" cy="150" r="140" fill="rgba(255,255,255,0.02)" stroke="rgba(242,210,124,0.55)" stroke-width="2"/>
               <path d="M77 194c26-60 63-96 111-105 19-4 44 2 58 14-12 2-24 9-32 17 12 9 20 21 23 37 5 26-6 53-30 70-24 18-52 18-78 7-10 12-23 23-40 33-12 7-23 10-36 10 7-9 14-18 24-29z"
                     fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M154 93c-6-14-9-28-7-42 12 8 23 19 31 33M200 104c12-6 25-9 40-8-8 11-18 20-31 27"
-                    fill="none" stroke="rgba(242,210,124,0.55)" stroke-width="5" stroke-linecap="round"/>
+                    fill="none" stroke="rgba(242,210,124,0.65)" stroke-width="5" stroke-linecap="round"/>
               <path d="M133 165c16 7 32 8 49 3" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="4" stroke-linecap="round"/>
             </svg>
           </div>
         </div>
       </div>
+
+      <a class="scrollHint" href="#menu" aria-label="Scroll to menu">
+        <span class="chev" aria-hidden="true"></span>
+        <span>Scroll for Menu</span>
+      </a>
     </section>
 
-    <section class="grid" aria-label="Menu sections">
+    <div class="actions" aria-label="Actions">
+      <div class="actionsLeft">
+        <button class="btn primary" id="copyBtn">Copy link</button>
+        <button class="btn" onclick="window.print()">Print</button>
+        <a class="btn" href="#menu">Jump to menu</a>
+      </div>
+      <div class="tinyUrl" id="pageUrl">https://marsronin.github.io/cny-party/</div>
+    </div>
+
+    <section class="stack" id="menu" aria-label="Menu sections (single column)">
       <div class="card">
         <h2>🥢 Cold Bites 冷食 <span class="tag">Start</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🧀 Cheese Platter（奶酪拼盘 · 坚果 · 水果）</li>
           <li>🍅 Caprese Skewers（番茄芝士串）</li>
@@ -261,6 +371,7 @@
 
       <div class="card">
         <h2>🔥 Hot Highlights 热食精选 <span class="tag">Main</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🥟 Mini Dumplings（迷你煎饺）</li>
           <li>🍤 Tempura Shrimp（天妇罗虾）</li>
@@ -271,6 +382,7 @@
 
       <div class="card">
         <h2>🍔 Western Bites 西式小食 <span class="tag">Kids</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🍔 Mini Sliders（迷你汉堡）</li>
           <li>🍕 Pizza Bites（小披萨）</li>
@@ -279,6 +391,7 @@
 
       <div class="card">
         <h2>🍜 Small Bowls 小碗主食 <span class="tag">Comfort</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🍚 Fried Rice（扬州炒饭）</li>
           <li>🍜 Stir-Fried Noodles（炒面）</li>
@@ -287,6 +400,7 @@
 
       <div class="card">
         <h2>🍡 Dessert 新年甜点 <span class="tag">Sweet</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🍡 Tangyuan（汤圆）</li>
           <li>🧁 Cupcakes（新年杯子蛋糕）</li>
@@ -296,20 +410,76 @@
 
       <div class="card">
         <h2>🍷 Drinks 饮品 <span class="tag">Cheers</span></h2>
+        <div class="dividerRow"></div>
         <ul>
           <li>🍾 Sparkling Wine</li>
-          <li>🍷 Wine</li>
+          <li>🍷 Red Wine</li>
           <li>🍺 Tsingtao Beer</li>
           <li>🍵 Chinese Tea</li>
           <li>🍹 New Year Special（Orange &amp; Sparkling）</li>
         </ul>
       </div>
 
-      <div class="card big">
-        <div class="note">
-          <b>Serving plan</b>：Cold bites first → Hot bites in waves → Small bowls → Dessert.<br/>
-          🧧🐎 <b>Wishing you energy, success &amp; joy!</b> 新春快乐 · 马到成功
-        </div>
-
+      <div class="card note">
+        <h2>✅ Serving Plan 上菜节奏 <span class="tag">Flow</span></h2>
+        <div class="dividerRow"></div>
+        <ul>
+          <li><b>Cold</b> → <b>Hot (in waves)</b> → <b>Small bowls</b> → <b>Dessert</b></li>
+          <li>🧧🐎 <b>Wishing you energy, success &amp; joy!</b> 新春快乐 · 马到成功</li>
+        </ul>
         <div class="footer">
-         
+          <span>Web: <span style="font-family:var(--mono);">marsronin.github.io/cny-party/</span></span>
+          <span style="opacity:.9;">Tip: iPhone Safari → Share → “Add to Home Screen”</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Link copied ✅</div>
+
+  </div>
+
+  <script>
+    // Copy link button
+    (function() {
+      const url = "https://marsronin.github.io/cny-party/";
+      const btn = document.getElementById("copyBtn");
+      const toast = document.getElementById("toast");
+      const showToast = (msg) => {
+        toast.textContent = msg;
+        toast.classList.add("show");
+        setTimeout(()=>toast.classList.remove("show"), 1400);
+      };
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(url);
+          showToast("Link copied ✅");
+        } catch(e) {
+          // fallback
+          const t = document.createElement("textarea");
+          t.value = url;
+          document.body.appendChild(t);
+          t.select();
+          document.execCommand("copy");
+          t.remove();
+          showToast("Link copied ✅");
+        }
+      });
+
+      // Subtle parallax on cover (disabled for reduced motion)
+      const media = document.getElementById("coverMedia");
+      const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) {
+        const onScroll = () => {
+          const rect = media.getBoundingClientRect();
+          const vh = window.innerHeight || 800;
+          const progress = (rect.top / vh); // roughly -1..1
+          const px = Math.max(-18, Math.min(18, progress * 18));
+          media.style.setProperty("--parallax", (px) + "px");
+        };
+        onScroll();
+        window.addEventListener("scroll", onScroll, {passive:true});
+      }
+    })();
+  </script>
+</body>
+</html>
