@@ -19,7 +19,7 @@
       --line:rgba(17,24,39,.10);
       --shadow: 0 22px 70px rgba(17,24,39,.10);
       --shadow2: 0 12px 30px rgba(17,24,39,.08);
-      --radius: 12px;
+      --radius: 22px;
       --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display","SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       --serif: ui-serif, "New York", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -56,15 +56,14 @@
       border: 1px solid rgba(17,24,39,.10);
     }
 
-    /* Border like a printed invitation */
-    
-    }
+    /* Double border like a printed invitation */
     .invite::before{
       content:"";
       position:absolute; inset: 14px;
       border-radius: calc(var(--radius) + 2px);
       border: 2px solid rgba(176,0,32,.48);
       pointer-events:none;
+    }
     .invite::after{
       content:"";
       position:absolute; inset: 22px;
@@ -380,7 +379,8 @@
             <button class="btn" onclick="window.print()">Print</button>
             <a class="btn" href="#menu">Jump to menu</a>
           </div>
-         
+          <div class="tinyUrl" id="pageUrl">https://marsronin.github.io/cny-party/</div>
+        </div>
 
         <section class="stack" id="menu" aria-label="Menu (single column)">
           <div class="card">
@@ -437,7 +437,7 @@
             <div class="dividerRow"></div>
             <ul>
               <li>🍾 Sparkling Wine</li>
-              <li>🍷 Wine</li>
+              <li>🍷 Red Wine</li>
               <li>🍺 Tsingtao Beer</li>
               <li>🍵 Chinese Tea</li>
               <li>🍹 New Year Special（Orange &amp; Sparkling）</li>
@@ -452,7 +452,7 @@
               <li>🧧🐎 <b>Wishing you energy, success &amp; joy!</b> 新春快乐 · 马到成功</li>
             </ul>
             <div class="footer">
-             
+              <span>Web: <span style="font-family:var(--mono);">marsronin.github.io/cny-party/</span></span>
               <span style="opacity:.95;">Tip: iPhone Safari → Share → “Add to Home Screen”</span>
             </div>
           </div>
@@ -465,7 +465,7 @@
 
   <script>
     (function() {
-      
+      const url = "https://marsronin.github.io/cny-party/";
       const btn = document.getElementById("copyBtn");
       const toast = document.getElementById("toast");
       const showToast = (msg) => {
