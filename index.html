@@ -379,7 +379,7 @@
             <button class="btn" onclick="window.print()">Print</button>
             <a class="btn" href="#menu">Jump to menu</a>
           </div>
-          <div class="tinyUrl" id="pageUrl"> /</div>
+          
         </div>
 
         <section class="stack" id="menu" aria-label="Menu (single column)">
@@ -465,13 +465,7 @@
 
   <script>
     (function() {
-      const url = "https://";
-      const btn = document.getElementById("copyBtn");
-      const toast = document.getElementById("toast");
-      const showToast = (msg) => {
-        toast.textContent = msg;
-        toast.classList.add("show");
-        setTimeout(()=>toast.classList.remove("show"), 1400);
+      
       };
       btn.addEventListener("click", async () => {
         try {
